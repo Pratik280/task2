@@ -1,0 +1,212 @@
+/* flex : <grow> <shrink> <basis>  */
+
+/* inspired by :  https://themes.vamtam.com/?theme=landscaping */
+
+/* GLOBAL */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+/* FONTS */
+
+@font-face{
+    font-family: "Roboto-Regular";
+    src: url('./fonts/Roboto-Regular.ttf');
+}
+
+@font-face{
+    font-family: "Roboto-Bold";
+    src: url('./fonts/Roboto-Bold.ttf');
+}
+
+@font-face{
+    font-family: "Roboto-Thin";
+    src: url('./fonts/Roboto-Thin.ttf');
+}
+
+@font-face{
+    font-family: "Autour-One";
+    src: url('./fonts/AutourOne-Regular.ttf');
+}
+
+@font-face{
+    font-family: "Cabin-Sketch";
+    src: url('./fonts/CabinSketch-Regular.ttf');
+}
+
+body{
+    font-family: 'Roboto-Regular';
+}
+
+h1{
+    font-size: 4rem;
+}
+
+h3{
+    font-size: 7rem;
+}
+
+h2{
+    font-size: 4.8rem;
+}
+
+h4,h5{
+    font-size: 2.8rem;
+}
+
+li,
+button,
+label,
+input,
+p{
+    font-size: 2rem;
+}
+
+a{  
+    color: black;
+    text-decoration: none;
+}
+
+/* HEADER NAV */
+
+header{
+    background: white;
+}
+
+header nav{
+    min-height: 10vh;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    flex : 1 1 40rem;
+    list-style: none;
+    font-family: 'Roboto-Thin';
+}
+
+.logo{
+    flex : 1 1 40rem;
+    font-family: 'Cabin-Sketch', cursive;
+    color: rgb(16, 65, 16);
+}
+
+/* MAIN IMAGE */
+
+#main-image{
+    min-height: 50vh;
+    background: linear-gradient(rgba(0,0,0,0.4),transparent),url('./images/markus-spiske-4PG6wLlVag4-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-image h3{
+    font-family: 'Roboto-Bold';
+    color: white;
+}
+
+#main-image p{
+    font-family: 'Autour-One', cursive;
+    color: white;
+    font-size: 7rem;
+}
+
+
+/* PLANTS-SECTION */
+
+#plants-section{
+    min-height: 80vh;
+    background: whitesmoke;
+    display: flex;
+    align-items: center;
+}
+
+#plant-wrapper{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* CARD STYLE*/
+
+.card{
+    height: 50vh;
+    width: 400px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: "image" "text"; 
+    text-align: center;
+    border-radius: 12px;
+    background: white;
+    /* box-shadow: 0px 25px 75px 0px rgba(0, 0, 0, 0.5); */
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1),0px 20px 20px rgba(0,0,0,0.1);
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.card-image{
+    grid-area: "image";
+}
+
+.card-text{
+    grid-area: "text";
+    background: lightgrey;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.card-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    
+}
+
+.card-text h4{
+    font-family: 'Autour-One', cursive;
+    font-size: 2.3rem;
+    padding-top: 17px;
+    padding-bottom: 15px;
+    color: rgb(16, 65, 16);
+}
+
+.card-text p{
+    padding: 2px;
+}
+
+.card:hover{
+    transform: scale(1.1);
+    box-shadow: 5px 10px 10px rgba(0,0,0,0.05),5px 20px 20px rgba(0,0,0,0.05);
+}
+
+/* FOOTER */
+
+footer ul{
+    min-height: 10vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    font-family: 'Roboto-Thin';
+}
